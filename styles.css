@@ -12,6 +12,14 @@ body {
 }
 
 .header {
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -20,9 +28,14 @@ body {
   padding: 20px;
   background: linear-gradient(135deg, #0077cc, #005fa3);
   color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Logo circular */
 .logo {
   width: 80px;
   height: 80px;
@@ -30,6 +43,23 @@ body {
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+/* Botón volver */
+#volver-btn {
+  margin-top: 20px;
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#volver-btn:hover {
+  background-color: #00264d;
+}
+
 
 .header-text {
   flex: 1;
@@ -44,6 +74,7 @@ body {
   margin: 5px 0 0;
   font-size: 1em;
 }
+
 
 .row {
   display: flex;
@@ -71,7 +102,6 @@ body {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
-  font-size: 1em;
 }
 
 .materias-section {
@@ -79,9 +109,7 @@ body {
   margin: 30px 20px;
 }
 
-#materias-btn,
-#volver-btn,
-.info-btn {
+#materias-btn {
   background-color: #007acc;
   color: white;
   border: none;
@@ -90,33 +118,26 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
-  width: auto;
 }
 
-#materias-btn:hover,
-#volver-btn:hover,
-.info-btn:hover {
+#materias-btn:hover {
   background-color: #005fa3;
 }
 
-#volver-btn {
-  margin-top: 20px;
-  background-color: #004080;
-}
-
-#volver-btn:hover {
-  background-color: #00264d;
-}
-
 #materias-container {
-  display: none; /* Oculto por defecto */
+  display: none; /* se mantiene oculto */
   flex-direction: column;
   align-items: center;
   margin: 30px auto;
   max-width: 900px;
   gap: 20px;
+}
+
+#materias-container.fade-in {
+  display: flex;
   animation: fadeIn 0.8s ease forwards;
 }
+
 
 .materia-card {
   background-color: #d0eaff;
@@ -133,6 +154,21 @@ body {
   transform: translateY(-5px);
 }
 
+.info-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #005fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.info-btn:hover {
+  background-color: #004080;
+}
+
 .extra-info {
   margin-top: 10px;
   color: #003366;
@@ -141,79 +177,25 @@ body {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   0% {opacity: 0; transform: translateY(30px);}
   100% {opacity: 1; transform: translateY(0);}
 }
 
-/* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .header-text h1 {
-    font-size: 1.5em;
-  }
-
-  .header-text p {
-    font-size: 1em;
-  }
-
   .row {
     flex-direction: column;
     align-items: center;
   }
 
-  .column {
-    width: 90%;
-    max-width: none;
-  }
-
   .materia-card {
     width: 90%;
-    font-size: 0.95em;
-  }
-
-  #materias-btn,
-  #volver-btn,
-  .info-btn {
-    width: 90%;
-    padding: 14px;
-    font-size: 1em;
-  }
-
-  .footer {
-    font-size: 0.9em;
   }
 }
 
-@media (max-width: 480px) {
-  .header-text h1 {
-    font-size: 1.2em;
-  }
-
-  .header-text p {
-    font-size: 0.9em;
-  }
-
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-
-  .materia-card {
-    font-size: 0.9em;
-  }
+.hidden {
+  display: none;
 }
