@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mostrarBtn.addEventListener('click', () => {
     infoGeneral.style.display = 'none';
-    seccionBoton.style.display = 'none';
+    seccionBoton.style.display = 'flex';
     materiasContainer.classList.remove('hidden');
   });
 
