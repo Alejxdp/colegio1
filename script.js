@@ -6,34 +6,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const infografiaBtns = document.querySelectorAll('.info-btn');
   const seccionBoton = document.getElementById('boton-mostrar');
 
-  // Mostrar materias
   mostrarBtn.addEventListener('click', () => {
-  infoGeneral.classList.add('hidden');
-  seccionBoton.classList.add('hidden');
+    infoGeneral.classList.add('hidden');
+    seccionBoton.classList.add('hidden');
+    materiasContainer.classList.remove('hidden');
+    materiasContainer.classList.add('fade-in');
+    volverBtn.classList.remove('hidden');
+  });
 
-  // Aplica clase animada
-  materiasContainer.classList.remove('hidden');
-  materiasContainer.classList.add('fade-in');
+  volverBtn.addEventListener('click', () => {
+    infoGeneral.classList.remove('hidden');
+    seccionBoton.classList.remove('hidden');
+    materiasContainer.classList.add('hidden');
+    materiasContainer.classList.remove('fade-in');
+    volverBtn.classList.add('hidden');
 
-  volverBtn.classList.remove('hidden');
-});
+    document.querySelectorAll('.extra-info').forEach(info => info.classList.add('hidden'));
+  });
 
-volverBtn.addEventListener('click', () => {
-  infoGeneral.classList.remove('hidden');
-  seccionBoton.classList.remove('hidden');
-
-  // Oculta materias y elimina animación
-  materiasContainer.classList.add('hidden');
-  materiasContainer.classList.remove('fade-in');
-
-  volverBtn.classList.add('hidden');
-
-  // Oculta infografías
-  document.querySelectorAll('.extra-info').forEach(info => info.classList.add('hidden'));
-});
-
-
-  // Mostrar/ocultar infografías
   infografiaBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const extraInfo = btn.nextElementSibling;
