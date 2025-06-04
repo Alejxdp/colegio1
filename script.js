@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const volverBtn = document.getElementById('volver-btn');
   const infoGeneral = document.getElementById('info-general');
   const materiasContainer = document.getElementById('materias-container');
-  const infografiaBtns = document.querySelectorAll('.info-btn');
   const seccionBoton = document.getElementById('boton-mostrar');
+  const infoBtns = document.querySelectorAll('.info-btn');
+  const flipCards = document.querySelectorAll('.flip-card');
 
   mostrarBtn.addEventListener('click', () => {
     infoGeneral.classList.add('hidden');
@@ -20,14 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
     materiasContainer.classList.add('hidden');
     materiasContainer.classList.remove('fade-in');
     volverBtn.classList.add('hidden');
-
-    document.querySelectorAll('.extra-info').forEach(info => info.classList.add('hidden'));
+    flipCards.forEach(card => card.classList.remove('flipped'));
   });
 
-  infografiaBtns.forEach((btn) => {
+  infoBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-      const extraInfo = btn.nextElementSibling;
-      extraInfo.classList.toggle('hidden');
+      flipCards.forEach((card, i) => {
+        if (i === index) {
+          card.classList.toggle('flipped');
+        } else {
+          card.classList.remove('flipped');
+        }
+      });
     });
   });
 });

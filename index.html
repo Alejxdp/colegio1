@@ -8,15 +8,15 @@
 </head>
 <body>
 
-  <header class="header">
+  <div class="header">
     <img src="escudo.png" alt="Escudo del colegio" class="logo">
     <div class="header-text">
       <h1>Unidad Educativa Fiscal 13 de Abril</h1>
       <p>Técnicos al servicio de la comunidad</p>
     </div>
-  </header>
+  </div>
 
-  <section id="info-general" class="row">
+  <div class="row" id="info-general">
     <div class="column">
       <h3>¿Quiénes Somos?</h3>
       <p>Somos una institución comprometida con la formación integral de nuestros estudiantes, basada en valores y excelencia académica.</p>
@@ -29,61 +29,73 @@
       <h3>Contacto</h3>
       <p>Dirección: Calle Principal #123<br>Tel: (01) 234-5678<br>Email: contacto@13deabril.edu</p>
     </div>
-  </section>
+  </div>
 
-  <section class="materias-section" id="boton-mostrar">
+  <div class="materias-section" id="boton-mostrar">
     <button id="materias-btn">Mostrar Materias</button>
-  </section>
+  </div>
 
-  <section id="materias-container" class="hidden">
+  <div id="materias-container" class="hidden">
     <h2>Materias Técnicas</h2>
 
-    <div class="materia-card">
-      <img src="icons/web-design.svg" alt="Icono Web" class="icono-materia">
-      <h3>Diseño y desarrollo web</h3>
-      <button class="info-btn">Infografía</button>
-      <div class="extra-info hidden">
-        <img src="infografias/web-design.png" alt="Infografía Web" class="img-info">
-        <p>Aprende a crear sitios web modernos con HTML, CSS y JavaScript.</p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Diseño y desarrollo web</h3>
+          <button class="info-btn">Infografía</button>
+        </div>
+        <div class="flip-card-back">
+          <img src="web-infografia.png" alt="Infografía Web">
+          <p>Aprende a crear sitios web modernos con HTML, CSS y JavaScript.</p>
+        </div>
       </div>
     </div>
 
-    <div class="materia-card">
-      <img src="icons/programming.svg" alt="Icono Programación" class="icono-materia">
-      <h3>Programación y bases de datos</h3>
-      <button class="info-btn">Infografía</button>
-      <div class="extra-info hidden">
-        <img src="infografias/programming.png" alt="Infografía Programación" class="img-info">
-        <p>Domina lenguajes de programación y estructuras de datos relacionales.</p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Programación y bases de datos</h3>
+          <button class="info-btn">Infografía</button>
+        </div>
+        <div class="flip-card-back">
+          <img src="programacion-infografia.png" alt="Infografía Programación">
+          <p>Domina lenguajes de programación y estructuras de datos relacionales.</p>
+        </div>
       </div>
     </div>
 
-    <div class="materia-card">
-      <img src="icons/support.svg" alt="Icono Soporte" class="icono-materia">
-      <h3>Soporte técnico</h3>
-      <button class="info-btn">Infografía</button>
-      <div class="extra-info hidden">
-        <img src="infografias/support.png" alt="Infografía Soporte" class="img-info">
-        <p>Resuelve problemas de hardware, software y redes con eficiencia.</p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Soporte técnico</h3>
+          <button class="info-btn">Infografía</button>
+        </div>
+        <div class="flip-card-back">
+          <img src="soporte-infografia.png" alt="Infografía Soporte">
+          <p>Resuelve problemas de hardware, software y redes con eficiencia.</p>
+        </div>
       </div>
     </div>
 
-    <div class="materia-card">
-      <img src="icons/os.svg" alt="Icono Sistemas" class="icono-materia">
-      <h3>Sistemas operativos y redes</h3>
-      <button class="info-btn">Infografía</button>
-      <div class="extra-info hidden">
-        <img src="infografias/os.png" alt="Infografía Sistemas" class="img-info">
-        <p>Comprende el funcionamiento de Windows, Linux y la configuración de redes informáticas.</p>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Sistemas operativos y redes</h3>
+          <button class="info-btn">Infografía</button>
+        </div>
+        <div class="flip-card-back">
+          <img src="sistemas-infografia.png" alt="Infografía Sistemas">
+          <p>Aprende sobre sistemas Windows, Linux, configuración de redes y seguridad.</p>
+        </div>
       </div>
     </div>
 
     <button id="volver-btn" class="hidden">Volver</button>
-  </section>
+  </div>
 
-  <footer class="footer">
+  <div class="footer">
     <p>&copy; 2025 Institución Educativa 13 de Abril. Todos los derechos reservados.</p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
