@@ -125,14 +125,19 @@ body {
 }
 
 #materias-container {
-  display: flex;
+  display: none; /* se mantiene oculto */
   flex-direction: column;
   align-items: center;
   margin: 30px auto;
   max-width: 900px;
   gap: 20px;
+}
+
+#materias-container.fade-in {
+  display: flex;
   animation: fadeIn 0.8s ease forwards;
 }
+
 
 .materia-card {
   background-color: #d0eaff;
