@@ -35,6 +35,32 @@ body {
   height: auto;
 }
 
+/* Logo circular */
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Botón volver */
+#volver-btn {
+  margin-top: 20px;
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#volver-btn:hover {
+  background-color: #00264d;
+}
+
+
 .header-text {
   flex: 1;
 }
