@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  color: #003366;
+  overflow-x: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+  color: white;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.column {
+  background-color: #e0f0ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.materias-section {
+  text-align: center;
+  margin: 30px 20px;
+  display: none;
+}
+
+#materias-btn {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#materias-btn:hover {
+  background-color: #005fa3;
+}
+
+#materias-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 900px;
+  gap: 20px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.materia-card {
+  background-color: #d0eaff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.materia-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #005fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.info-btn:hover {
+  background-color: #004080;
+}
+
+.extra-info {
+  margin-top: 10px;
+  color: #003366;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .materia-card {
+    width: 90%;
+  }
+}
