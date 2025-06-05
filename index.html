@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="escudo.png" type="image/png">
-
 </head>
 <body>
 
@@ -17,92 +16,93 @@
       <p>Técnicos al servicio de la comunidad</p>
     </div>
     <div class="header-links">
-      <a href="https://www.ejemplo1.com" target="_blank" class="link-btn">Sitio Externo 1</a>
-      <a href="https://www.ejemplo2.com" target="_blank" class="link-btn">Sitio Externo 2</a>
+      <a href="https://www.sitioexterno1.com" class="header-btn" target="_blank">Sitio Externo 1</a>
+      <a href="https://www.sitioexterno2.com" class="header-btn" target="_blank">Sitio Externo 2</a>
     </div>
   </header>
 
-  <section id="info-general" class="row">
-    <div class="column">
-      <h3>¿Quiénes Somos?</h3>
-      <p>Somos una institución comprometida con la formación integral de nuestros estudiantes, basada en valores y excelencia académica.</p>
-    </div>
-    <div class="column">
-      <h3>Niveles Educativos</h3>
-      <p>Ofrecemos educación desde nivel inicial hasta secundaria, con un equipo docente altamente calificado.</p>
-    </div>
-    <div class="column">
-      <h3>Contacto</h3>
-      <p>Dirección: Calle Principal #123<br>Tel: (01) 234-5678<br>Email: contacto@13deabril.edu</p>
-    </div>
-  </section>
-
-<section id="boton-mostrar" class="materias-section">
-  <button id="materias-btn">MATERIAS</button>
-</section>
-
-<section id="materias-container" class="hidden">
-  <h2>Materias Técnicas</h2>
-
-  <div class="materia-card">
-    <div class="card-inner">
-      <div class="card-front">
-        <img src="icons/web-design.svg" alt="Icono Web" class="icono-materia">
-        <h3>Diseño y desarrollo web</h3>
-        <button class="info-btn">Infografía</button>
+  <main class="main-content fade-in-on-load">
+    <section id="info-general" class="row">
+      <div class="column">
+        <h3>¿Quiénes Somos?</h3>
+        <p>Somos una institución comprometida con la formación integral de nuestros estudiantes, basada en valores y excelencia académica.</p>
       </div>
-      <div class="card-back">
-        <img src="infografias/web-design.png" alt="Infografía Web" class="img-info">
-        <p>Aprende a crear sitios web modernos con HTML, CSS y JavaScript.</p>
+      <div class="column">
+        <h3>Niveles Educativos</h3>
+        <p>Ofrecemos educación desde nivel inicial hasta secundaria, con un equipo docente altamente calificado.</p>
       </div>
-    </div>
-  </div>
+      <div class="column">
+        <h3>Contacto</h3>
+        <p>Dirección: Calle Principal #123<br>Tel: (01) 234-5678<br>Email: contacto@13deabril.edu</p>
+      </div>
+    </section>
 
-  <div class="materia-card">
-    <div class="card-inner">
-      <div class="card-front">
-        <img src="icons/programming.svg" alt="Icono Programación" class="icono-materia">
-        <h3>Programación y bases de datos</h3>
-        <button class="info-btn">Infografía</button>
-      </div>
-      <div class="card-back">
-        <img src="infografias/programming.png" alt="Infografía Programación" class="img-info">
-        <p>Domina lenguajes de programación y estructuras de datos relacionales.</p>
-      </div>
-    </div>
-  </div>
+    <section id="boton-mostrar" class="materias-section">
+      <button id="materias-btn">MATERIAS</button>
+    </section>
 
-  <div class="materia-card">
-    <div class="card-inner">
-      <div class="card-front">
-        <img src="icons/support.svg" alt="Icono Soporte" class="icono-materia">
-        <h3>Soporte técnico</h3>
-        <button class="info-btn">Infografía</button>
-      </div>
-      <div class="card-back">
-        <img src="infografias/support.png" alt="Infografía Soporte" class="img-info">
-        <p>Resuelve problemas de hardware, software y redes con eficiencia.</p>
-      </div>
-    </div>
-  </div>
+    <section id="materias-container" class="hidden">
+      <h2>Materias Técnicas</h2>
 
-  <div class="materia-card">
-    <div class="card-inner">
-      <div class="card-front">
-        <img src="icons/os.svg" alt="Icono Sistemas" class="icono-materia">
-        <h3>Sistemas operativos y redes</h3>
-        <button class="info-btn">Infografía</button>
+      <div class="materia-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="icons/web-design.svg" alt="Icono Web" class="icono-materia">
+            <h3>Diseño y desarrollo web</h3>
+            <button class="info-btn">Infografía</button>
+          </div>
+          <div class="card-back">
+            <img src="infografias/web-design.png" alt="Infografía Web" class="img-info">
+            <p>Aprende a crear sitios web modernos con HTML, CSS y JavaScript.</p>
+          </div>
+        </div>
       </div>
-      <div class="card-back">
-        <img src="infografias/os.png" alt="Infografía Sistemas" class="img-info">
-        <p>Comprende el funcionamiento de Windows, Linux y la configuración de redes informáticas.</p>
+
+      <div class="materia-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="icons/programming.svg" alt="Icono Programación" class="icono-materia">
+            <h3>Programación y bases de datos</h3>
+            <button class="info-btn">Infografía</button>
+          </div>
+          <div class="card-back">
+            <img src="infografias/programming.png" alt="Infografía Programación" class="img-info">
+            <p>Domina lenguajes de programación y estructuras de datos relacionales.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <button id="volver-btn" class="hidden">Volver</button>
-</section>
+      <div class="materia-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="icons/support.svg" alt="Icono Soporte" class="icono-materia">
+            <h3>Soporte técnico</h3>
+            <button class="info-btn">Infografía</button>
+          </div>
+          <div class="card-back">
+            <img src="infografias/support.png" alt="Infografía Soporte" class="img-info">
+            <p>Resuelve problemas de hardware, software y redes con eficiencia.</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="materia-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="icons/os.svg" alt="Icono Sistemas" class="icono-materia">
+            <h3>Sistemas operativos y redes</h3>
+            <button class="info-btn">Infografía</button>
+          </div>
+          <div class="card-back">
+            <img src="infografias/os.png" alt="Infografía Sistemas" class="img-info">
+            <p>Comprende el funcionamiento de Windows, Linux y la configuración de redes informáticas.</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="volver-btn" class="hidden">Volver</button>
+    </section>
+  </main>
 
   <footer class="footer">
     <p>&copy; 2025 Institución Educativa 13 de Abril. Todos los derechos reservados.</p>

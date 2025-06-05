@@ -6,40 +6,36 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #e6f0ff, #ffffff);
+  background: linear-gradient(to right, #f8fbff, #e5f0ff);
   color: #003366;
-  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  animation: fadeInPage 1s ease-in-out;
+  overflow-x: hidden;
 }
 
-@keyframes fadeInPage {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-body > *:not(footer) {
+main.main-content {
   flex: 1;
+  padding-bottom: 40px;
 }
 
-/* Header */
+.fade-in-on-load {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 20px;
+  justify-content: space-between;
   background: linear-gradient(135deg, #0077cc, #005fa3);
+  padding: 20px;
   color: white;
+  flex-wrap: wrap;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -53,69 +49,63 @@ body > *:not(footer) {
 
 .header-text {
   flex: 1;
+  padding: 0 20px;
 }
 
 .header-text h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .header-text p {
-  margin: 5px 0 0;
-  font-size: 1em;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
 
-/* Botones de hipervínculo en el header */
 .header-links {
-  width: 100%;
-  margin-top: 10px;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
-.link-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #004080;
+.header-btn {
+  background-color: #003d80;
   color: white;
+  padding: 8px 16px;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 0.9em;
   transition: background 0.3s ease;
 }
 
-.link-btn:hover {
-  background-color: #002f5d;
+.header-btn:hover {
+  background-color: #002a5c;
 }
 
-/* Sección de información general */
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
+  gap: 15px;
+  margin: 30px 0;
 }
 
 .column {
   background-color: #e0f0ff;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 10px;
   padding: 20px;
   flex: 1;
   min-width: 280px;
   max-width: 350px;
-  text-align: center;
-  transition: all 0.5s ease;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Botón principal para mostrar materias */
 .materias-section {
   text-align: center;
   margin: 30px 20px;
 }
 
-#materias-btn {
+#materias-btn, #volver-btn {
   background-color: #007acc;
   color: white;
   border: none;
@@ -124,13 +114,13 @@ body > *:not(footer) {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 15px;
 }
 
-#materias-btn:hover {
+#materias-btn:hover, #volver-btn:hover {
   background-color: #005fa3;
 }
 
-/* Contenedor de materias */
 #materias-container {
   display: none;
   flex-direction: column;
@@ -145,35 +135,18 @@ body > *:not(footer) {
   animation: fadeIn 0.8s ease forwards;
 }
 
-@keyframes fadeIn {
-  0% {opacity: 0; transform: translateY(30px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
 .materia-card {
-  background-color: #d0eaff;
-  border-radius: 12px;
-  padding: 20px;
+  perspective: 1000px;
   width: 100%;
   max-width: 600px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  perspective: 1000px;
-}
-
-.materia-card:hover {
-  transform: translateY(-5px);
 }
 
 .card-inner {
   position: relative;
   width: 100%;
-  max-width: 600px;
   height: 300px;
   transform-style: preserve-3d;
   transition: transform 0.8s;
-  margin: auto;
 }
 
 .card-flipped .card-inner {
@@ -196,10 +169,6 @@ body > *:not(footer) {
   align-items: center;
 }
 
-.card-front {
-  z-index: 2;
-}
-
 .card-back {
   transform: rotateY(180deg);
 }
@@ -217,7 +186,6 @@ body > *:not(footer) {
   border-radius: 8px;
 }
 
-/* Botón de infografía */
 .info-btn {
   margin-top: 10px;
   padding: 8px 16px;
@@ -233,55 +201,10 @@ body > *:not(footer) {
   background-color: #004080;
 }
 
-/* Botón volver */
-#volver-btn {
-  margin-top: 20px;
-  background-color: #004080;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#volver-btn:hover {
-  background-color: #00264d;
-}
-
-/* Footer siempre al final */
 .footer {
   background-color: #003366;
   color: white;
   text-align: center;
   padding: 15px;
   margin-top: auto;
-  flex-shrink: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .materia-card {
-    width: 90%;
-  }
-
-  .header-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .link-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Clases de utilidad */
-.hidden {
-  display: none;
 }
