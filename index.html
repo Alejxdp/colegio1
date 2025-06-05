@@ -1,101 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unidad Educativa Fiscal 13 de Abril</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>13 de Abril</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="escudo.png" type="image/png">
+
 </head>
 <body>
 
-  <header class="encabezado">
-    <div class="logo-titulo">
-      <img src="logo.png" alt="Logo" class="logo"/>
+  <header class="header">
+    <img src="escudo.png" alt="Escudo del colegio" class="logo">
+    <div class="header-text">
       <h1>Unidad Educativa Fiscal 13 de Abril</h1>
+      <p>Técnicos al servicio de la comunidad</p>
     </div>
-    <div class="botones-header">
-      <a href="#">Sitio Externo 1</a>
-      <a href="#">Sitio Externo 2</a>
-    </div>
-    <p class="subtitulo">Técnicos al servicio de la comunidad</p>
   </header>
 
-  <section class="info-general">
-    <div class="caja">
+  <section id="info-general" class="row">
+    <div class="column">
       <h3>¿Quiénes Somos?</h3>
       <p>Somos una institución comprometida con la formación integral de nuestros estudiantes, basada en valores y excelencia académica.</p>
     </div>
-    <div class="caja">
+    <div class="column">
       <h3>Niveles Educativos</h3>
       <p>Ofrecemos educación desde nivel inicial hasta secundaria, con un equipo docente altamente calificado.</p>
     </div>
-    <div class="caja">
+    <div class="column">
       <h3>Contacto</h3>
       <p>Dirección: Calle Principal #123<br>Tel: (01) 234-5678<br>Email: contacto@13deabril.edu</p>
     </div>
   </section>
 
-  <main class="contenedor">
-    <h2>Materias Técnicas</h2>
+<section id="boton-mostrar" class="materias-section">
+  <button id="materias-btn">MATERIAS</button>
+</section>
 
-    <div class="materia">
-      <h3>Diseño y desarrollo web</h3>
-      <div class="tarjeta">
-        <div class="frontal">
-          <button class="btn-voltear">Infografía</button>
-          <img src="web.jpg" alt="Diseño Web">
-          <p>Aprende a crear sitios web modernos con HTML, CSS y JavaScript.</p>
-        </div>
-        <div class="trasera">
-          <img src="infografia-web.jpg" alt="Infografía Diseño Web">
-          <p>Infografía sobre Diseño y Desarrollo Web.</p>
-        </div>
+<section id="materias-container" class="hidden">
+  <h2>Materias Técnicas</h2>
+
+  <div class="materia-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="icons/web-design.svg" alt="Icono Web" class="icono-materia">
+        <h3>Diseño y desarrollo web</h3>
+        <button class="info-btn">Infografía</button>
+      </div>
+      <div class="card-back">
+        <img src="infografias/web-design.png" alt="Infografía Web" class="img-info">
+        <p>Aprende a crear sitios web modernos con HTML, CSS y JavaScript.</p>
       </div>
     </div>
+  </div>
 
-    <div class="materia">
-      <h3>Programación y bases de datos</h3>
-      <div class="tarjeta">
-        <div class="frontal">
-          <button class="btn-voltear">Infografía</button>
-          <img src="programacion.jpg" alt="Programación y Bases de Datos">
-          <p>Domina lenguajes de programación y estructuras de datos relacionales.</p>
-        </div>
-        <div class="trasera">
-          <img src="infografia-programacion.jpg" alt="Infografía Programación">
-          <p>Infografía sobre Programación y Bases de Datos.</p>
-        </div>
+  <div class="materia-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="icons/programming.svg" alt="Icono Programación" class="icono-materia">
+        <h3>Programación y bases de datos</h3>
+        <button class="info-btn">Infografía</button>
+      </div>
+      <div class="card-back">
+        <img src="infografias/programming.png" alt="Infografía Programación" class="img-info">
+        <p>Domina lenguajes de programación y estructuras de datos relacionales.</p>
       </div>
     </div>
+  </div>
 
-    <div class="materia">
-      <h3>Soporte técnico</h3>
-      <div class="tarjeta">
-        <div class="frontal">
-          <button class="btn-voltear">Infografía</button>
-          <img src="soporte.jpg" alt="Soporte Técnico">
-          <p>Aprende a brindar soporte a computadoras, redes y software.</p>
-        </div>
-        <div class="trasera">
-          <img src="infografia-soporte.jpg" alt="Infografía Soporte Técnico">
-          <p>Infografía sobre Soporte Técnico.</p>
-        </div>
+  <div class="materia-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="icons/support.svg" alt="Icono Soporte" class="icono-materia">
+        <h3>Soporte técnico</h3>
+        <button class="info-btn">Infografía</button>
+      </div>
+      <div class="card-back">
+        <img src="infografias/support.png" alt="Infografía Soporte" class="img-info">
+        <p>Resuelve problemas de hardware, software y redes con eficiencia.</p>
       </div>
     </div>
+  </div>
 
-  </main>
+  <div class="materia-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="icons/os.svg" alt="Icono Sistemas" class="icono-materia">
+        <h3>Sistemas operativos y redes</h3>
+        <button class="info-btn">Infografía</button>
+      </div>
+      <div class="card-back">
+        <img src="infografias/os.png" alt="Infografía Sistemas" class="img-info">
+        <p>Comprende el funcionamiento de Windows, Linux y la configuración de redes informáticas.</p>
+      </div>
+    </div>
+  </div>
 
-  <script>
-    const tarjetas = document.querySelectorAll('.tarjeta');
-    tarjetas.forEach(t => {
-      const boton = t.querySelector('.btn-voltear');
-      boton.addEventListener('click', () => {
-        tarjetas.forEach(card => {
-          if (card !== t) card.classList.remove('girada');
-        });
-        t.classList.toggle('girada');
-      });
-    });
-  </script>
+  <button id="volver-btn" class="hidden">Volver</button>
+</section>
+
+
+  <footer class="footer">
+    <p>&copy; 2025 Institución Educativa 13 de Abril. Todos los derechos reservados.</p>
+    <p>Created by Alejandro Demera</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
