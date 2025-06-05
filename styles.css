@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f8ff;
+  background-color: #0077cc;
   color: #003366;
   overflow-x: hidden;
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .column {
-  background-color: #e0f0ff;
+  background-color: transparent; /* Cambiado a transparente */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: 10px;
